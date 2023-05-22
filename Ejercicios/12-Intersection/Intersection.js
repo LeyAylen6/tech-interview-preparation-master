@@ -74,5 +74,54 @@ function intersection (arr1, arr2) {
 
 // Complejidad >>> O(n)
 
-console.log(intersection([1,3,5,7,10], [2,3,6,8,10,20]))
+// console.log(intersection([1,3,5,7,10], [2,3,6,8,10,20]))
+
+// ! Usar objeto en lugar de array
+function intersection (arr1, arr2) {
+  const hashMap = {};
+
+  // hashMap = {
+    // 1: true
+    // 3: true
+    // 5: true
+    // 7: true
+    // 10: true
+    // 20: true
+  // }
+
+  // result = [3, 10]
+
+  const result = [];
+
+  for(const num1 of arr1) hashMap[num1] = true
+
+  for(const num2 of arr2) {
+    // Mira si existe la propiedad [num]
+    if(hashMap[num2]) result.push(num2)
+  }
+  return result;
+}
+// Complejidad >>> O(n + m)
+
+// ! Refactor del objeto
+function intersection (arr1, arr2) {
+  const hashMap = {};
+
+  for(const num1 of arr1) hashMap[num1] = true
+
+  return arr2.filter(num2 => hashMap[num2])
+}
+// Complejidad >>> O(n + m)
+
+// ! Refactor usando Map (Clase) => Es un obj de ES6
+// El map ordena solo, si pones numeros los pone de menor a mayor
+function intersection (arr1, arr2) {
+  const hashMap = {};
+  
+  for(const num1 of arr1) hashMap.set(num1, true)
+
+  return arr2.filter(num2 => hashMap.get(num2))
+}
+// Complejidad >>> O(n + m)
+
 module.exports = intersection
