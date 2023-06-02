@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const longestIncreasingSubsequence = require('../Ejercicios/14-LongestIncreasingSubSequence/LongestIncreasingSubSequence')
 
-xdescribe('LongestIncreasingSubSequence', function () {
+describe('LongestIncreasingSubSequence', function () {
   it('should return 3 as the longest increasing sequence is 3,4,5', function () {
     expect(longestIncreasingSubsequence([3, 10, 4, 5])).to.equals(3)
   })

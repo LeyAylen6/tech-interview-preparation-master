@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const { Node, MinStack } = require('../Ejercicios/05-MinStack/MinStack')
 
-xdescribe('Node', function () {
+describe('Node', function () {
   it('should have property value initilized with parameter passed', () => {
     const node = new Node(4)
     expect(node.value).to.equal(4)
@@ -12,7 +12,7 @@ xdescribe('Node', function () {
   })
 })
 
-xdescribe('MinStack', function () {
+describe('MinStack', function () {
   let minStack
   beforeEach(() => {
     minStack = new MinStack()

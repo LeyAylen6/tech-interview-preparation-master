@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const spy = require('../Ejercicios/15-SpyOn/SpyOn')
 
-xdescribe('SpyOn', function () {
+describe('SpyOn', function () {
   const adder = (n1, n2) => {
     return n1 + n2
   }

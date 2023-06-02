@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const subSetSum = require('../Ejercicios/13-SubSetSum/SubSetSum')
 
-xdescribe('SubSetSum', function () {
+describe('SubSetSum', function () {
   it('should return true as 1 + 5 + 3 equals 9', function () {
     expect(subSetSum([1, 10, 5, 3], 9)).to.equals(true)
   })

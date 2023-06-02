@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const clockMinuteAdder = require('../Ejercicios/11-ClockMinuteAdder/ClockMinuteAdder')
 
-xdescribe('ClockMinuteAdder', function () {
+describe('ClockMinuteAdder', function () {
   it("Should return '09:20' if add 20 minutes to '9:00'", () => {
     expect(clockMinuteAdder('09:00', 20)).to.equal('09:20')
   })
