@@ -13,31 +13,31 @@ class Node {
 
 class MinStack {
   constructor() {
-    this.head = null; // THIS.TOP = THIS.HEAD
+    this.top = null; // THIS.TOP = THIS.top
   }
   
   push(value) {
-    const current = this.head;
-    this.head = new Node(value);
-    this.head.next = current;
+    const current = this.top;
+    this.top = new Node(value);
+    this.top.next = current;
 
-    if(!current) this.head.min = value;
+    if(!current) this.top.min = value;
 
-    else if (value < current.min) this.head.min = value;
+    else if (value < current.min) this.top.min = value;
 
-    else this.head.min = current.min
+    else this.top.min = current.min
   }
 
   pop() {
-    const popped = this.head;
-    this.head = this.head.next;
+    const popped = this.top;
+    this.top = this.top.next;
     return popped.value;
   }
 
   min() {
     return this.top.min;
 
-    // ? Usando bucle while => No hace falta crear la prop min.
+    // ? Usando bucle while => No hace falta crear la prop
     // let min = Infinity;
 
     // while(current) {

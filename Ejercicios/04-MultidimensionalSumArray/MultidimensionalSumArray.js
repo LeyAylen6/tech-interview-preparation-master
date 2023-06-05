@@ -11,19 +11,19 @@
 // }
 
 // // ! Refactor
-// function mdArraySum (arr, count = 0) {
+function mdArraySum (arr, count = 0) {
   
-//   for(element of arr) {
-//     count = typeof element === 'number' ? count + element : mdArraySum(element, count)
-//   }
-//   return count;
-// }
+  for(element of arr) {
+    count = typeof element === 'number' ? count + element : mdArraySum(element, count)
+  }
+  return count;
+}
 
 // ! Refactor 2
-function mdArraySum (arr, count) {
+// function mdArraySum (arr, count) {
 
-  return arr.reduce((count, element) => count + (typeof element === 'number' ? count + element : mdArraySum(element, count)), 0);
-}
+//   return arr.reduce((count, element) => count + (typeof element === 'number' ? count + element : mdArraySum(element, count)), 0);
+// } --> ver q falla. NO pasa el test
 
 // Complejidad >> O(n^m) --> es una complejidad mayor al log(n)
 

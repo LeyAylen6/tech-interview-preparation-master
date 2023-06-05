@@ -9,50 +9,50 @@
 
 // ! Fuerza bruta
 
-function DecimalToBynary (num) {
-  const binary = [];
+// function DecimalToBynary (num) {
+//   const binary = [];
   
-  while (num > 0) {
-    const module = num % 2;
-    binary.push(module) //Lo ponemos adelante ya que se agarra de la ultima division para adelante
-    num = Math.floor(num/2)
-  }
-  return binary.reverse().join('')
-}
+//   while (num > 0) {
+//     const module = num % 2;
+//     binary.push(module) //Lo ponemos adelante ya que se agarra de la ultima division para adelante
+//     num = Math.floor(num/2)
+//   }
+//   return binary.reverse().join('')
+// }
 
 // ! Refactor
 
-function DecimalToBynary (num) {
-  const binary = [];
+// function DecimalToBynary (num) {
+//   const binary = [];
   
-  while (num > 0) {
-    const module = num % 2;
-    binary.unshift(module) //Lo ponemos adelante ya que se agarra de la ultima division para adelante
-    num = Math.floor(num/2)
-  }
-  return binary.join('')
-}
+//   while (num > 0) {
+//     const module = num % 2;
+//     binary.unshift(module) //Lo ponemos adelante ya que se agarra de la ultima division para adelante
+//     num = Math.floor(num/2)
+//   }
+//   return binary.join('')
+// }
 
 // ! Re-Refactor
 
-function DecimalToBynary (num) {
-  let binary = '';
+// function DecimalToBynary (num) {
+//   let binary = '';
   
-  while (num > 0) {
-    binary = num % 2 + binary//Lo ponemos adelante ya que se agarra de la ultima division para adelante
-    num = Math.floor(num/2)
-  }
-  return binary
-}
+//   while (num > 0) {
+//     binary = num % 2 + binary//Lo ponemos adelante ya que se agarra de la ultima division para adelante
+//     num = Math.floor(num/2)
+//   }
+//   return binary
+// }
 
 // ! Recursion
 
-function DecimalToBynary (num) {
-  const module = num % 2;
+// function DecimalToBynary (num) {
+//   const module = num % 2;
 
-  if (num) return DecimalToBynary(Math.floor(num/2)) + module
-  return '';
-}
+//   if (num) return DecimalToBynary(Math.floor(num/2)) + module
+//   return '';
+// }
 
 // ! Refactor de recursion
 

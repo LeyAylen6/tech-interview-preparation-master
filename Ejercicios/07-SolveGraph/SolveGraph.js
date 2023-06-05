@@ -1,18 +1,17 @@
 // ! Solución 1  --> usando Array 
+// function SolveGraph (graph, start, target, visited = []) {
+//   // Your code here:
 
-function SolveGraph (graph, start, target, visited = []) {
-  // Your code here:
+//   if(visited.includes(start)) return;
+//   visited.push(start);
 
-  if(visited.includes(start)) return;
-  visited.push(start);
+//   for(const node of graph[start]) {
+//     if(node === target) return true;
+//     if(SolveGraph(graph, node, target, visited)) return true;
+//   }
 
-  for(const node of graph[start]) {
-    if(node === target) return true;
-    if(SolveGraph(graph, node, target, visited)) return true;
-  }
-
-  return false;
-}
+//   return false;
+// }
 // Complejidad >>> n*log(n)
 
 // ! Solución 2  --> usando objeto 

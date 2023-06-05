@@ -1,18 +1,20 @@
-function subSetSum (nums, target) {
+// ! Solución fuerza bruta
+// function subSetSum (nums, target) {
   
-  let sumas = [0]
+//   let sumas = [0]
 
-  for (const num of nums) {
-    for (const sum of sumas) { // Si usamos sumas siempre le estamos agregando un lugar mas entonces nunca se termina de recorrer el arr.
-      const result = num + sum
+//   for (const num of nums) {
+//     for (const sum of sumas) { // Si usamos sumas siempre le estamos agregando un lugar mas entonces nunca se termina de recorrer el arr.
+//       const result = num + sum
 
-      if(result === target) return true
-      sumas.push(result)
-    }
-  }
-  return false
-}
+//       if(result === target) return true
+//       sumas.push(result)
+//     }
+//   }
+//   return false
+// }
 
+// ! Solución refactor
 function subSetSum (nums, target) {
   
   let sumas = [0]

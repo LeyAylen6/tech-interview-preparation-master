@@ -1,44 +1,44 @@
 // ! Solución fuerza bruta
-function SumArray (arr, n) {
+// function SumArray (arr, n) {
 
-  // No hace falta que lo recorra con j desde O porque ya cuando recorre i el primer lugar, j recorre todo el resto. Entonces I queda descartada
-  for(let i = 0; i < arr.length - 1; i++) {
-    for(let j = i + 1; j < arr.length; j++) {
+//   // No hace falta que lo recorra con j desde O porque ya cuando recorre i el primer lugar, j recorre todo el resto. Entonces I queda descartada
+//   for(let i = 0; i < arr.length - 1; i++) {
+//     for(let j = i + 1; j < arr.length; j++) {
       
-      if ( arr[i] + arr[j] === n) return true;
+//       if ( arr[i] + arr[j] === n) return true;
       
-    }
-  }
-  return false;
-}
+//     }
+//   }
+//   return false;
+// }
 // Complejidad >>> O(n^2)
 
 // ! Solución Refactor 1
-function SumArray (arr, n) {
+// function SumArray (arr, n) {
 
-  // No hace falta que lo recorra con j desde O porque ya cuando recorre i el primer lugar, j recorre todo el resto. Entonces I queda descartada
+//   // No hace falta que lo recorra con j desde O porque ya cuando recorre i el primer lugar, j recorre todo el resto. Entonces I queda descartada
 
-  for(let i = 0; i < arr.length - 1; i++) {
-    let j = i + 1
+//   for(let i = 0; i < arr.length - 1; i++) {
+//     let j = i + 1
     
-    if ( arr[i] + arr[j] === n) return true;
-  }
+//     if ( arr[i] + arr[j] === n) return true;
+//   }
   
-return false;
-}
+// return false;
+// }
 
 // ! Solución Refactor 2
-function SumArray (arr, n) {
+// function SumArray (arr, n) {
 
-  // No hace falta que lo recorra con j desde O porque ya cuando recorre i el primer lugar, j recorre todo el resto. Entonces I queda descartada
-  for(let i = 0; i < arr.length - 1; i++) {
-    let j = i + 1
+//   // No hace falta que lo recorra con j desde O porque ya cuando recorre i el primer lugar, j recorre todo el resto. Entonces I queda descartada
+//   for(let i = 0; i < arr.length - 1; i++) {
+//     let j = i + 1
     
-    if ( arr[i] + arr[j] === n) return true;
-  }
+//     if ( arr[i] + arr[j] === n) return true;
+//   }
   
-return false;
-}
+// return false;
+// }
 
 // Complejidad >>> O(n)
 
